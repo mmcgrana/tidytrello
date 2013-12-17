@@ -61,7 +61,6 @@ func mustTimeParse(s string) time.Time {
 }
 
 func mustGetTrello(r string, v interface{}) {
-	fmt.Print(".")
 	resp, err := http.Get("https://api.trello.com/1/" + r + "?key=" + trelloKey + "&token=" + trelloToken)
 	if err != nil {
 		panic(err)
@@ -103,9 +102,6 @@ func main() {
 			staleBoards = append(staleBoards, board)
 		}
 	}
-
-	// Print last newline after API call dots
-	fmt.Println()
 
 	// Print filtered boards
 	for _, board := range staleBoards {
