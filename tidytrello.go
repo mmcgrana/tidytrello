@@ -1,9 +1,3 @@
-// Print information about stale boards in your Trello org.
-//
-//   $ export KEY=...
-//   $ export TOKEN=...
-//   $ export ORG=...
-//   $ go run tidytrello.go
 package main
 
 import (
